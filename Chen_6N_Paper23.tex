@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+
+\title{\Large \textbf{Phase Transition Kinetics and Topological Event Horizons\\ at Extreme $\omega$}}
+\author{Ruqing Chen\\
+\small GUT Geoservice Inc., Montreal, Quebec, Canada\\
+\small \texttt{ruqing@hotmail.com}}
+\date{\today}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+While Parts XX through XXII established the spatial correlation tensor of the 6N lattice via continuous phase-space integration, this paper returns to the vertical depth manifold to investigate the kinetics of extreme pressure environments. We model the topological phase transition of prime constellations as the prime factor count of the bounding center approaches the primorial limit ($\omega \to \infty$). By introducing the concept of topological ``Absorbing States,'' we formulate the ensemble expectation of tuple survival as a competition between monotonic geometric enrichment and exponential decay via killer primes. This kinetic model rigorously grounds the finite, bounded enrichment of Twin primes (the deterministic primorial product, $\approx 7.030$ at $\omega=15$, diverging only in the unreachable $\omega\to\infty$ limit) and analytically locates the `Event Horizon' (the critical $\omega$ threshold where $d\langle E\rangle/d\omega = 0$) for those cross-center tuples that possess one---separating the triplet ($\omega^\star\!\approx\!9$) and quadruplet ($\omega^\star\!\approx\!4$), which peak then collapse, from the quintuplet, which has three killer primes and decays monotonically with no interior horizon. The construction is a closed-form extrapolation of the wind-tunnel mechanics of Volume~I to a depth ($\omega=15$, $N>4.7\times10^{18}$) far beyond direct observation; it is hypothesis, not measurement.
+\end{abstract}
+
+\section{Introduction}
+In Volume I of the Arithmetic Geodynamics framework, empirical sieving down to proper depth shell $S_{11}$ revealed a monotonic proper-depth decay law ($d\ln\rho_m/d\ell \to -m$)~\cite{ChenXVII,ChenXIX}. Additionally, numerical ``wind tunnel'' simulations extrapolated to extreme high-pressure zones (e.g., $\omega=15$, requiring $X > 10^{18}$) suggested a violent divergence in tuple fates~\cite{Review}: Twins enriched boundlessly, while higher-dimensional cross-center tuples ($m \ge 3$) peaked and then collapsed to zero measure.
+
+In Part XXI, we geometrically proved that this collapse is caused by total phase-space occlusion (Zero-Measure Annihilation)~\cite{ChenXXI}. In this paper, we derive the exact continuous differential kinetics of this process. We model the structural evolution of a tuple as $\omega$ increases, proving that the apparent ``gravitational collapse'' is a deterministically calculable topological phase transition.
+
+\section{The Primorial Limit and Twin Enrichment}
+
+To evaluate extreme high-pressure environments, we idealize the constellation center $N$ as approaching a primorial structure. Let $\Omega_k$ denote a center whose prime factorization consists exactly of the first $k$ primes greater than 3. For example, $\Omega_{15}$ implies $N$ is a multiple of $\{5, 7, 11, \dots, 59\}$.
+
+Because the Twin prime constellation $(6N-1, 6N+1)$ resides entirely on the center $N$, its topological offset $\pm 1$ is coprime to all $q > 3$. Consequently, as established in the Twin Immunity Lemma (Part XXI), it is immune to Zero-Measure Annihilation. 
+
+Its geodynamic enrichment multiplier $E_{\text{Twin}}$ under condition $\Omega_k$ is the deterministic product of its single-center base measures:
+\begin{equation}
+E_{\text{Twin}}(\Omega_k) = \prod_{i=1}^{k} \frac{p_i}{p_i - 2}
+\end{equation}
+
+Evaluating this product at the physical limit of our previous wind tunnel simulations ($k=15$):
+\begin{equation}
+E_{\text{Twin}}(\Omega_{15}) = \frac{5}{3} \times \frac{7}{5} \times \frac{11}{9} \times \dots \times \frac{59}{57} \approx \mathbf{7.030}
+\end{equation}
+This mathematically grounds the simulation: the Twin enrichment at extreme depths is not an ambiguous ``infinite sublimation'' but a rigidly calculable, finite topological multiplier at every finite $\omega$. (The product diverges only in the $\omega\to\infty$ limit, since $\sum_q 2/(q-2)$ diverges; at any reachable depth it is finite, e.g.\ $\times7.03$ at $\omega=15$.)
+
+\section{Killer Primes and Topological Absorbing States}
+
+For cross-center tuples (e.g., Triplets or Quadruplets), the kinetic model diverges completely. A Triplet $(6N-1, 6N+1, 6N+5)$ possesses a structural offset $+5$.
+
+\begin{definition}[Killer Prime Set]
+For any constellation $B$, the Killer Prime Set $K_B$ is the set of all primes $q>3$ that strictly divide any member's offset relative to the base center $N$. For the Triplet, $K_{\text{Trip}} = \{5\}$. For the Quadruplet ($+7$), $K_{\text{Quad}} = \{5, 7\}$.
+\end{definition}
+
+In a Markovian dynamic model, hitting any prime $q \in K_B$ acts as a topological \textbf{Absorbing State}. If the center $N$ contains even a single killer prime factor, the joint phase-space integral evaluates to 0 (as proven in Part XXI), and the survival probability is irreversibly annihilated.
+
+\section{The Phase Transition Kinetics Equation}
+
+We can now express the expected ensemble survival multiplier of a cross-center tuple $B$ across a randomized high-pressure strata characterized by an average prime factor count $\omega$.
+
+The continuous kinetic equation evaluating the state of a center $N$ (whose prime factor set is $F_N$ with $|F_N| = \omega$) is:
+\begin{equation}
+\langle E_B(\omega) \rangle = \underbrace{P(K_B \cap F_N = \emptyset)}_{\text{Survival Probability}} \times \underbrace{\prod_{q \in F_N \setminus K_B} \frac{q}{q-m_B}}_{\text{Geometric Enrichment}}
+\end{equation}
+
+Here, the Survival Probability is the likelihood that the center has avoided all killer primes. In the finite primorial pool of the first $K$ primes $>3$, drawing $\omega$ distinct factors, it is the hypergeometric $P(K_B\cap F_N=\varnothing)=\binom{K-|K_B|}{\omega}/\binom{K}{\omega}$, monotonically decreasing to $0$ as $\omega\to K$. If the center survives, it accumulates the absolute geometric enrichment multiplier for every non-killer prime it possesses.
+
+\section{Locating the Topological Event Horizon}
+
+By analytically continuing the discrete factor count $\omega$ into a continuous thermodynamic state variable (analogous to macroscopic pressure or temperature in statistical mechanics), we can evaluate the kinetic equilibrium of the system using continuous differential calculus.
+
+The macroscopic phase transition (the peak of the survival curve before collapse) occurs exactly where the derivative of the ensemble expectation with respect to the state variable $\omega$ equals zero.
+
+\begin{theorem}[Conditional Event Horizon]
+Write $\langle E_B(\omega)\rangle=S(\omega)\,G(\omega)$ with $S$ the survival
+probability (decreasing) and $G$ the conditional geometric enrichment
+(increasing). An \emph{interior} Event Horizon---a critical $\omega^\star$ with
+$d\langle E_B\rangle/d\omega=0$ separating a rising phase from collapse---exists if
+and only if the marginal log-enrichment is positive at the first step,
+\[
+  \Delta\ln\langle E_B\rangle\big|_{\omega=1}
+  =\underbrace{\Delta\ln G}_{>0}+\underbrace{\Delta\ln S}_{<0}\;>\;0,
+\]
+i.e.\ iff the enrichment from a typical added prime initially outweighs the risk
+of striking a killer. When this fails (too many killer primes), the trajectory
+decreases from $\omega=1$ and the maximum sits at the boundary.
+\end{theorem}
+
+\begin{proof}
+Monotonicity of $G$ ($\Delta\ln G>0$) and $S$ ($\Delta\ln S<0$) alone does
+\emph{not} force an interior maximum: the product $SG$ may rise then fall, or fall
+throughout. The discrete marginal $\Delta\ln\langle E_B\rangle(\omega)=\Delta\ln
+G(\omega)+\Delta\ln S(\omega)$ starts positive precisely under the stated
+condition. As $\omega$ grows, $S$ approaches the absorbing state and $\Delta\ln S
+\to-\infty$ while $\Delta\ln G$ stays bounded, so the marginal eventually turns
+negative; a sign change (the horizon) then occurs iff the marginal was positive to
+begin with. If $\Delta\ln\langle E_B\rangle|_{\omega=1}\le0$ the marginal is
+negative throughout and the maximum is the boundary point $\omega=1$.
+\end{proof}
+
+The killer count decides which regime holds. Exact evaluation of
+$\langle E_B(\omega)\rangle$ over the $15$-prime primorial pool
+(Fig.~\ref{fig:horizon}) gives:
+\begin{itemize}
+\item \textbf{Triplet} (one killer $\{5\}$): interior horizon at $\omega^\star=9$
+  (peak $\langle E\rangle\approx1.77$), then collapse to $0$ at $\omega=15$.
+\item \textbf{Quadruplet} (two killers $\{5,7\}$): earlier horizon at
+  $\omega^\star=4$ (peak $\approx1.10$), collapse by $\omega=14$.
+\item \textbf{Quintuplet} (three killers $\{5,7,11\}$): \emph{no} interior horizon.
+  The marginal is negative already at $\omega=1$, so $\langle E\rangle$ decreases
+  monotonically from the outset---the killer density is too high for an enrichment
+  phase to form.
+\end{itemize}
+The Twin (zero killers) is the opposite extreme: $S\equiv1$, so $\langle E\rangle=G$
+rises monotonically to the boundary value $\times7.03$ at $\omega=15$.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.97\textwidth]{fig_event_horizon.pdf}
+\caption{Ensemble enrichment $\langle E_B(\omega)\rangle$ over the $15$-prime
+primorial pool (closed-form extrapolation, \emph{not} prime data). (A) Twin rises
+to $\times7.03$; triplet and quadruplet peak at their Event Horizons
+$\omega^\star=9,4$ then collapse; the quintuplet (three killers) has no interior
+horizon and decays from $\omega=1$. (B) The marginal log-growth
+$\Delta\ln\langle E_B\rangle$: its zero crossing is the horizon for triplet and
+quadruplet, while for the quintuplet it never becomes positive.}
+\label{fig:horizon}
+\end{figure}
+
+\section{Conclusion}
+By translating the Volume~I wind-tunnel simulations into a kinetic model of
+absorbing states, we have shown that the fate of a cross-center tuple under
+extreme congruence pressure is a deterministic competition between monotonic
+geometric enrichment and killer-prime annihilation. The resulting Event Horizon is
+\emph{conditional}: it exists for tuples with few killer primes (triplet
+$\omega^\star=9$, quadruplet $\omega^\star=4$) but not for the quintuplet, whose
+three killers suppress any enrichment phase. The Twin, with no killer, enriches
+monotonically to the finite primorial value $\times7.03$ at $\omega=15$. We
+emphasize the scope: this kinetics lives entirely in the closed-form modular
+mechanics extrapolated to $\omega=15$ ($N>4.7\times10^{18}$), a depth no sieve
+reaches, and it assumes the local-factor multiplicativity validated only to
+$\omega\approx5$--$6$ persists. It is a hypothesis-generating self-portrait of the
+model, not an observation of primes, and makes no claim about the infinitude of
+any constellation.
+
+\paragraph{Data and code availability.}
+The exact ensemble-enrichment computation $\langle E_B(\omega)\rangle$ and the
+Event-Horizon figure are openly available at
+\url{https://github.com/Ruqing1963/6N-event-horizon}~\cite{repo}.
+
+\begin{thebibliography}{9}
+\bibitem{HL} G.~H.~Hardy, J.~E.~Littlewood, \emph{Some problems of `Partitio
+Numerorum'; III}, Acta Math.\ \textbf{44} (1923), 1--70.
+\bibitem{ChenXVII} R.~Chen, \emph{Arithmetic geodynamics on the $6N$ skeleton}
+(Part~XVII), Zenodo, doi:10.5281/zenodo.20541575 (2026).
+\bibitem{ChenXIX} R.~Chen, \emph{The tuple-size law at $m=5$} (Part~XIX), Zenodo,
+doi:10.5281/zenodo.20551393 (2026).
+\bibitem{ChenXXI} R.~Chen, \emph{The irreducible three-body congruence correlation
+and the annihilation lattice} (Part~XXI), Zenodo, doi:10.5281/zenodo.20584909 (2026).
+\bibitem{Review} R.~Chen, \emph{Arithmetic geodynamics on the $6N$ skeleton: a
+review of Parts I--XIX}, Zenodo, doi:10.5281/zenodo.20585301 (2026).
+\bibitem{repo} R.~Chen, \emph{Phase transition kinetics and topological event
+horizons at extreme $\omega$} (Part~XXIII),
+\url{https://github.com/Ruqing1963/6N-event-horizon} (2026).
+\end{thebibliography}
+
+\end{document}

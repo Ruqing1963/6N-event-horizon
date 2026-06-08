@@ -1,0 +1,5 @@
+tuple,killer_primes,omega_star,interior_horizon,peak_E
+twin,{},15,False,7.029949
+triplet,{5},9,True,1.770331
+quadruplet,"{5,7}",4,True,1.102787
+quintuplet,"{5,7,11}",1,False,0.987984

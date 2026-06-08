@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "Phase Transition Kinetics and Topological Event Horizons at Extreme omega (Part XXIII)"
+authors:
+  - family-names: Chen
+    given-names: Ruqing
+    affiliation: "GUT Geoservice Inc., Montreal, Quebec, Canada"
+    email: ruqing@hotmail.com
+version: "1.0.0"
+date-released: "2026-06-07"
+license: MIT
+url: "https://github.com/Ruqing1963/6N-event-horizon"
+keywords:
+  - prime constellations
+  - twin primes
+  - phase transition
+  - killer primes
+  - absorbing states
+  - singular series
+  - experimental mathematics
+  - number theory
+references:
+  - type: software
+    title: "The Irreducible Three-Body Congruence Correlation and the Annihilation Lattice (Part XXI)"
+    authors: [{family-names: Chen, given-names: Ruqing}]
+    doi: 10.5281/zenodo.20584909
+  - type: software
+    title: "Multidimensional Tensor Convolution and the Spectral Cutoff of Lattice Transitions (Part XXII)"
+    authors: [{family-names: Chen, given-names: Ruqing}]
+    doi: 10.5281/zenodo.20585074
